@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Lucy415/My-wallet/issues"
   },
-  "homepage": "https://github.com/Lucy415/My-wallet#readme"
+  "homepage": "https://github.com/Lucy415/My-wallet#readme",
+  "description": ""
 }
