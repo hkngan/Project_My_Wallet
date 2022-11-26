@@ -1,5 +1,5 @@
 module.exports = {
-    port: 3307,
+    port: 3308,
     db: {
         database: process.env.DB_NAME || 'mywallet',
         user: process.env.DB_USER || 'root',
