@@ -1,18 +1,29 @@
 <script>
-// import HomePage from '@/view/HomePage.vue';
-import HeaderPage from '@/components/HeaderPage.vue'
-export default {   
+import LoginPage from './view/LoginPage.vue';
+
+export default {
     components: {
-        HeaderPage,
+        LoginPage
+
     },
 };
 </script>
 <template>
-    <HeaderPage />
+    <div id="app">
        <router-view/>
-       
-       
-    
+    </div>
 </template>
-<style>
+<style scoped>
+#app {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
 </style>

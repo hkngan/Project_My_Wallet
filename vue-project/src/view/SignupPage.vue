@@ -8,12 +8,13 @@
                     <input class="form-input" v-model="fullname" type="text" placeholder="Fullname" required>
                 </div>
                 <br>
+               
                 <div class="form-login-item">
-                    <input class="form-input" v-model="email" type="email" placeholder="@email" required>
+                    <input class="form-input" v-model="mobilephone" type="text" placeholder="Mobile phone" required>
                 </div>
                 <br>
                 <div class="form-login-item">
-                    <input class="form-input" v-model="mobilephone" type="text" placeholder="Mobile phone" required>
+                    <input class="form-input" v-model="email" type="email" placeholder="@email" required>
                 </div>
                 <br>
                 <div class="form-login-item">
@@ -53,7 +54,7 @@ export default {
                 })
                 this.$store.dispatch('setToken', response.data.token)
                 this.$store.dispatch('setUser', response.data.user)
-                this.$router.push({name: "login"})
+                this.$router.push({name: "Login"})
             } catch (error) {
                 this.error = error.response.data.error
             }
@@ -81,11 +82,14 @@ html {
 
 header {
     font-size: 35px;
-    padding: 3% 0 0 0;
+    padding: 5% 0 0 0;
+    color: white;
 }
 
 h4 {
     padding: 0 0 3% 0;
+    color: white;
+
 }
 
 header,
@@ -98,7 +102,7 @@ h4 {
 .form{
     background-color: black;
     width: 450px;
-    height: 500px;
+    height: 520px;
     margin: 1% 0 0 395px;
     border-radius: 10px;
 }
@@ -107,7 +111,7 @@ button {
     display: inline-block;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px 0 0 105px;
+    margin: 10px 50px 0 50px;
     transform: scale(1.2);
     transition: all 0.5s linear;
     font-family: 'Abel', sans-serif;
@@ -126,7 +130,7 @@ input:focus {
 input[class="form-input"] {
     width: 250px;
     height: 50px;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 0;
     font-size: 16px;
     font-family: 'Abel', sans-serif;
     padding-left: 10px;

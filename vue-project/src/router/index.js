@@ -1,34 +1,47 @@
 import { createWebHistory, createRouter } from 'vue-router';
+import HomePage from '../view/HomePage.vue'
 const routes = [
-    {
-        path: '/',
-        name: 'HomePage',
-        component: () => import('@/view/HomePage.vue'),
-    },
     {
         path: '/signup',
         name: 'Signup',
-        component: () => import('@/view/SignupPage.vue'),
+        component: () => import(/* webpackChunkName: "Overview" */ '@/view/SignupPage.vue'),
     },
     {
-        path: '/login',
-        name: 'login',
+        path: '/',
+        name: 'Login',
         component: () => import('@/view/LoginPage.vue'),
     },
     {
         path: '/getpw',
-        name: 'Forgot_pwd',
-        component: () => import('@/view/ForgotPass.vue'),
+        name: 'get_pw',
+        component: () => import('@/view/LoginPage.vue'),
     },
     {
-        path: '/add_ex',
-        name: 'Add',
-        component: () => import('@/view/AddExpense.vue'),
-    },
-    {
-        path: '/reports',
-        name: 'reports',
-        component: () => import('@/view/ReportExpense.vue'),
+        path: '/homepage',
+        name: 'HomePage',
+        component: HomePage, 
+        children: [
+            {
+                path: '/add_ex',
+                name: 'Add',
+                component: () => import(/* webpackChunkName: "AddExpense" */ '@/view/AddExpense.vue'),
+            },
+            {
+                path: '/add_ex/edit/:id',
+                name: 'add.edit',
+                component: () => import(/* webpackChunkName: "AddExpense" */ '@/view/AddExpense.vue'),
+            },
+            {
+                path: '/reports',
+                name: 'reports',
+                component: () => import(/* webpackChunkName: "ReportExpense" */ '@/view/ReportExpense.vue'),
+            },
+            {
+                path: '/profile',
+                name: 'profile',
+                component: () => import(/* webpackChunkName: "ProfilePage" */ '@/view/ProfilePage.vue'),
+            },
+        ]
     },
 ];
 const router = createRouter({

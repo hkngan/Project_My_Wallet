@@ -1,62 +1,73 @@
 <template>
-     <div class="box-form">
-        <header class="head-form">
-          <h2>Wellcome to MyWallet</h2>
-          <img src="https://cdn-icons-png.flaticon.com/512/3360/3360459.png" alt="#">
-        </header>
+  <div class="dashboard">
+      <SideBar/>
+      <div class="content">
+        <!-- <canvas id="myChart" width="400" height="200"></canvas> -->
+          <router-view/>
       </div>
-      
+  </div>
 </template>
+
 <script>
+// import Chart from 'chart.js/auto';
+import SideBar from '../components/SideBar.vue'
 export default {
   name: 'HomePage',
-  methods:{
-    signupwitch_func(){
-    this.$router.push({name: "Signup"});
-    },
-    loginswitch_func(){
-      this.$router.push({name: "login"});
-    }
-  }
+  components: {
+      SideBar
+  },
+//   mounted(){
+//     const ctx = document.getElementById('myChart');
+//     const myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ['January', 'Ferbruary', 'March', 'April', 'May', 'June'],
+//         datasets: [{
+//             label: 'Expense Daily',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
+// myChart;
+//   }
 }
 </script>
+
 <style>
-@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur|Sofia');
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100vw;
 }
-body, html {
-  background-color: rgb(254, 254, 254);
-  opacity: 9.5;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-h2 {
-  text-align: center;
-  font-family: "Sofia", sans-serif;
-  padding: 30px;
-  font-size: 30px;
-}
-
-.box-form {
-  width: 1250px;
-  min-height: 350px;
-  height: auto;
+.content {
+  background-color: white;
   border-radius: 10px;
-  margin: 5% 15px 0 15px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  box-shadow: 0 9px 50px hsla(0, 1%, 51%, 0.31);
-  float: right;
+  margin: 6px 6px 6px 0px;
 }
-img{
-  width: 250px;
-  height: 250px;
-  margin: auto 0 30px 41%
-}
-
-
 </style>

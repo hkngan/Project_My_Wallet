@@ -25,6 +25,7 @@
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
 export default {
+    name: 'LoginPage',
     data() {
         return {
             email: '',
@@ -82,7 +83,7 @@ button {
     height: 45px;
     border-radius: 5px;
     transition: all 0.5s linear;
-    margin: 20px 0 0 175px;
+    margin: 20px 0 0 0;
     font-family: 'Abel', sans-serif;
     font-size: 16px;
 }
@@ -99,8 +100,7 @@ input[class="form-input"]{
 width: 250px;
 height: 50px;
 margin-top: 2%;
-padding: 15px;
-margin-left: 100px;
+padding: 10px;
 font-size: 16px;
 font-family: 'Abel', sans-serif;
 color: #5E6472;
@@ -111,7 +111,7 @@ transition: 0.2s linear;
 }
 .login_form .other a {
     color: white;
-    padding: 0 0 0 90px;
+    padding: 0 50px 0 50px;
 }
 a:hover {
     color: rgba(230, 108, 108, 0.619);
