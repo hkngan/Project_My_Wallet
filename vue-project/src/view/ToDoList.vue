@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Hi, add something!!</h1>
+        <h1>Hi, add your spending plan!!</h1>
         <div class="add-todo">
             <input class="todo-input" v-model="todo.Content" type="text" placeholder="Type here..">
             <button class="todo-submit" @click="addtodo()"></button>

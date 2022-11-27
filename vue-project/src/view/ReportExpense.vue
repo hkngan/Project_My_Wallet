@@ -19,9 +19,9 @@
           <td> {{ report.ExpenseCost }}</td>
           <td>{{ report.ExpenseDate }}</td>
           <td>
-            <button style="margin-right: 10px; border-radius: 5px" @click="onDelete(report)">Delete</button>
+            <button class="delete-btn" style="margin-right: 10px; border-radius: 5px" @click="onDelete(report)"></button>
             <router-link :to="{name: 'add.edit', params: {id: report.id}}">
-              <button style="border-radius: 5px">Edit</button></router-link>
+              <button class="edit-btn" style="border-radius: 5px"></button></router-link>
           </td>
         </tr>
         <tr>
@@ -89,6 +89,34 @@ export default {
 
 span {
   font-size: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.delete-btn {
+  margin-left: auto;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/img/delete-icon.png);
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+}
+.edit-btn {
+  margin-left: auto;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/img/edit.png);
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
 }
 </style>

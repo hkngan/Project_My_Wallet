@@ -2,7 +2,9 @@
     <form >
     <div class="login_form">
         <header>Login Here</header>
-        <h4>Use your username and password</h4>
+        <h4>Use your username and password. If you don't have a account yet? 
+            <router-link to="signup">Register</router-link>
+        </h4>
         <div class="field-set">
             <input class="form-input" v-model="email" type="text" placeholder="@example.com" required>
          <br>
@@ -13,10 +15,7 @@
       <br>
       <div class="error" v-html="error"/>
         <br>
-      <div class="other">
-       <router-link to="signup">Register</router-link>
-       <router-link to="getpw">Forgot password?</router-link>
-      </div>
+
         </div>
     </form>
     
@@ -65,7 +64,7 @@ h4 {
 header,
 h4 {
     text-align: center;
-    font-family: "Sofia", sans-serif;
+    font-family: "Abel", sans-serif;
     color: white;
 }
 .login_form {
@@ -112,6 +111,9 @@ transition: 0.2s linear;
 .login_form .other a {
     color: white;
     padding: 0 50px 0 50px;
+}
+a{
+    color: white;
 }
 a:hover {
     color: rgba(230, 108, 108, 0.619);

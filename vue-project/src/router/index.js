@@ -11,11 +11,7 @@ const routes = [
         name: 'Login',
         component: () => import('@/view/LoginPage.vue'),
     },
-    {
-        path: '/getpw',
-        name: 'get_pw',
-        component: () => import('@/view/LoginPage.vue'),
-    },
+
     {
         path: '/homepage',
         name: 'HomePage',
