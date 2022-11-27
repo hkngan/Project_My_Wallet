@@ -10,6 +10,11 @@
           PROFILE
         </div>
       </router-link>
+      <router-link to="/todolist" active-class="active" exact class="side-btn">
+        <div class="link-container">
+          TO-DO LIST
+        </div>
+      </router-link>
       <router-link to="/reports" active-class="active" exact class="side-btn">
         <div class="link-container">
           EXPENSE

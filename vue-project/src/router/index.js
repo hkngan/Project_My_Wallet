@@ -41,6 +41,11 @@ const routes = [
                 name: 'profile',
                 component: () => import(/* webpackChunkName: "ProfilePage" */ '@/view/ProfilePage.vue'),
             },
+            {
+                path: '/todolist',
+                name: 'todolist',
+                component: () => import(/* webpackChunkName: "ToDoList" */ '@/view/ToDoList.vue'),
+            },
         ]
     },
 ];

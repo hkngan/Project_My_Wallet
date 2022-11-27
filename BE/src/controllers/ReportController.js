@@ -29,7 +29,7 @@ module.exports = {
         try {
             const report = await Report.create(req.body)
             res.status(200).send({
-                Sucess: 'Update sucess'
+                Sucess: 'Create sucess'
             })
         } catch (err) {
             res.status(500).send({

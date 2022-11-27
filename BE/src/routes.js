@@ -1,6 +1,8 @@
 const AuthenticationController = require('./controllers/AuthenticationController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const ReportController = require('./controllers/ReportController')
+const TodoListController = require('./controllers/TodoListController')
+
 module.exports = (app) => {
     app.post('/signup',
         AuthenticationControllerPolicy.signup,
@@ -26,5 +28,17 @@ module.exports = (app) => {
 
     app.get('/report/:id',
         ReportController.getData)
+    
+    app.post('/todolist',
+        TodoListController.post)
+
+    app.get('/todolist',
+        TodoListController.findAll)
+
+    app.get('/todolist/:id',
+        TodoListController.findOne)
+    
+    app.delete('/todolist/:id',
+        TodoListController.delete)
 }
 
